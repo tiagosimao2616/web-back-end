@@ -101,7 +101,8 @@ function multiplos5(){
     
     while (resultado<20){
         resultado = cont * 5
-        multiplos += [resultado,]
+        if (resultado<20)
+            console.log(resultado)
         cont += 1
     }
 
@@ -110,3 +111,70 @@ function multiplos5(){
 
 var multiplos = multiplos5()
 console.log(multiplos)
+
+function multupleOf(multiplo,limite){
+    for (var i = multiplo; i < limite ; i+=multiplo){
+        console.log(i)
+    }
+}
+
+function cem(){
+    var cont = 1;
+    var soma = 0;
+    while (cont<=100){
+        soma += cont;
+        cont += 1;
+    }
+    console.log(soma);
+    return soma;
+
+}
+
+var soma_cem = cem();
+console.log(soma_cem);
+
+
+function fatorial(n){
+    var fact = 1
+    for (var i=n; i > 1; i--){
+        fact *= i;
+    }
+    return fact;
+}
+
+var f = fatorial(5);
+console.log(f);
+
+
+function min(array){
+    var m = array[0];
+    for(var i=0; i<array.length; i++){
+        if(array[i] < m)
+        m = array[i];
+    }
+    return m;
+}
+
+
+function min(array){
+    var m = array[0];
+    for(var i=0; i<array.length; i++){
+        if(array[i] > m)
+        m = array[i];
+    }
+    return m;
+}
+
+function media(array){
+    
+}
+
+var array1 = [2,3,7,9,0,10];
+var array2 = [2,3,7,9,0,10,99];
+
+
+console.log(array1.length);
+
+min(array1);
+min(array2);
+
