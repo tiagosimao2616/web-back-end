@@ -178,3 +178,14 @@ console.log(array1.length);
 min(array1);
 min(array2);
 
+function media(array){
+    var sum = 0;
+    for(var i=0; i<array.length; i++){
+        sum += array[i]
+    }
+    var avg = sum/array.length
+    return avg;
+    
+}
+
+console.log(media(array1));
