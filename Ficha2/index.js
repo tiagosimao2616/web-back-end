@@ -16,8 +16,8 @@ function indicemassacorporal (peso,altura){
     }
 }
 
-var test1 = indicemassacorporal(200,2);
-console.log(test1);
+//var test1 = indicemassacorporal(200,2);
+//console.log(test1);
 
 
 function inverso (string){
@@ -33,8 +33,8 @@ function inverso (string){
     return reversed;
 }
 
-var test2 = inverso("Hoje e Domingo");
-console.log(test2);
+//var test2 = inverso("Hoje e Domingo");
+//console.log(test2);
 
 function contavogais(string){
     cont = 0;
@@ -46,8 +46,8 @@ function contavogais(string){
     return cont;
 }
 
-var test3 = contavogais("Hello World");
-console.log(test3);
+//var test3 = contavogais("Hello World");
+//console.log(test3);
 
 function detetar (string,letra){
     cont = 0;
@@ -59,6 +59,52 @@ function detetar (string,letra){
     return cont;
 }
 
-var test4 = detetar("hello world","l");
-console.log(test4);
+//var test4 = detetar("hello world","l");
+//console.log(test4);
 
+function tempotrabalho (hs,ms,ss,hq,mq,sq){
+
+    var soma_segundos_saida = (hq*3600) + (mq * 60 ) + sq ;
+    var soma_segundos_entrada = (hs*3600) + (ms * 60 ) + ss ;
+    var total_segundos_trabalho = soma_segundos_saida - soma_segundos_entrada;
+    
+    var horas_trabalho = total_segundos_trabalho % 3600;
+    var segundos_trabalho = horas_trabalho % 60
+    var m = (horas_trabalho - segundos_trabalho) / 60;
+    var h = ( total_segundos_trabalho - horas_trabalho) / 3600 ;
+
+
+
+    //console.log("H: " + h + " M: " + m + " S: " + segundos_trabalho);
+}
+
+//var test5 = tempotrabalho(8,0,0,9,2,5);
+//console.log(test5);
+
+function retangulo (largura,altura){
+    var c= "";
+    for(var j=0; j<largura; j++){
+        c+="*"
+    }
+
+    for(var i=0; i<altura;i++){
+        console.log(c)
+    }
+
+}
+
+var test6 = retangulo(20,22);
+console.log(test6);
+
+function triangulo (altura) {
+    var t = "";
+
+    for (i = 0; i < altura ; i ++){
+
+        console.log(t += "*");
+    }
+
+        
+}
+
+triangulo(20);
