@@ -93,8 +93,8 @@ function retangulo (largura,altura){
 
 }
 
-var test6 = retangulo(20,22);
-console.log(test6);
+//var test6 = retangulo(20,22);
+//console.log(test6);
 
 function triangulo (altura) {
     var t = "";
@@ -107,4 +107,136 @@ function triangulo (altura) {
         
 }
 
-triangulo(20);
+//triangulo(20);
+
+function caixa (lado){
+    var box = "";
+    for(var i = 0; i < lado ; i++){
+        for(var j = 0; j < lado; j++){
+            if(i==0 || i == lado - 1 || j == 0 || j == lado - 1){
+                box += "*";
+            }
+            else{
+                box += " "
+            }
+            }
+            box += "\n"
+        }
+        console.log(box);
+    }
+
+//caixa(10)
+
+function notas (array1){
+    var melhor_nota = array1[0][1];
+    var pior_nota = array1 [0][1];
+    var negativas = 0;
+    var positivas = 0;
+    var soma = 0;
+    var media = 0;
+    var array2 = [];
+    for(var i = 0; i < array1.length; i++){
+        console.log(array1[i][1])
+        soma += array1[i][1];
+        if (array1[i][1]>melhor_nota){
+            melhor_nota = array1[i][1]
+        }
+        if (array1[i][1]<pior_nota){
+            pior_nota = array1[i][1]
+        }
+        if (array1[i][1]>=0 && array1[i][1]<10){
+            negativas += 1;
+        }
+        if (array1[i][1]>=10 && array1[i][1]<=20){
+            positivas += 1
+        }
+
+    }
+    media = soma / array1.length;
+    for(var j = 0; j < array1.length; j++){
+        if (media>array1[j][1]){
+            array2 += [media-array1[j][1]];
+        }
+        else if (media<array1[j][1]){
+            array2 += [array1[j][1]-media];
+        }
+        //console.log(array2);
+    }
+    //console.log("Melhor nota: " + melhor_nota + "\n" + "Pior nota: " + pior_nota + "\n" + "Positivas: " + positivas + "\n" + "Negativas: " + negativas )
+   // console.log("S: " + soma + "M: " + media)
+
+}
+
+//notas([["João",20],["Tiago",15],["Pedro",10],["Ana",8],["Maria",7]])
+
+
+var student1 = {name: "Pedro Alves", grade: 20, number: 678};
+var student2 = {name: "Ana Maria", grade: 16, number: 679};
+var student3 = {name: "João Silva", grade: 11, number: 680};
+var student4 = {name: "Vasco Teixeira", grade: 6, number: 681};
+var student5 = {name: "Luís Santos", grade: 7, number: 682};
+
+var studentList = [];
+
+studentList.push(student1);
+studentList.push(student2);
+studentList.push(student3);
+studentList.push(student4);
+studentList.push(student5);
+
+
+function averageGrade(studentList){
+    var sum = 0;
+    for(var i=0; i<studentList.length; i++){
+        sum += studentList[i].grade;
+    }
+    var avg = sum/studentList.length;
+    return avg;
+    
+}
+
+var avg = averageGrade(studentList);
+
+function studentClosestToAvg(studentList){
+    var avg = averageGrade(studentList);
+    var min = avg;
+    for(let index = 0; index < studentList.length; index ++){
+        const student = studentList[index];
+        var diff = Math.abs(student.grade - avg);
+        if (diff<min){
+            min = diff;
+            closestStudent = student;
+        }
+    }
+    return closestStudent;
+}
+
+var test = studentClosestToAvg(studentList);
+console.log(test);
+
+function negativas (studentList){
+    var negativas = 0;
+    for(var i = 0; i < studentList.length; i++){
+        if (studentList.grade[i]<=9){
+            negativas += 1
+        }
+    }
+    return negativas;
+}
+
+function positivas (studentList){
+    var positivas = 0;
+    for(var i = 0; i < studentList.length; i++){
+        if (studentList.grade[i]>=10){
+            positivas += 1
+        }
+    }
+    return positivas;
+}
+
+
+var negativas = negativas(studentList);
+console.log(negativas);
+
+var positivas = positivas(studentList);
+console.log(positivas);
