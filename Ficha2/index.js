@@ -16,8 +16,8 @@ function indicemassacorporal (peso,altura){
     }
 }
 
-//var test1 = indicemassacorporal(200,2);
-//console.log(test1);
+var test1 = indicemassacorporal(200,2);
+console.log(test1);
 
 
 function inverso (string){
@@ -33,8 +33,8 @@ function inverso (string){
     return reversed;
 }
 
-//var test2 = inverso("Hoje e Domingo");
-//console.log(test2);
+var test2 = inverso("Hoje e Domingo");
+console.log(test2);
 
 function contavogais(string){
     cont = 0;
@@ -46,8 +46,8 @@ function contavogais(string){
     return cont;
 }
 
-//var test3 = contavogais("Hello World");
-//console.log(test3);
+var test3 = contavogais("Hello World");
+console.log(test3);
 
 function detetar (string,letra){
     cont = 0;
@@ -59,8 +59,8 @@ function detetar (string,letra){
     return cont;
 }
 
-//var test4 = detetar("hello world","l");
-//console.log(test4);
+var test4 = detetar("hello world","l");
+console.log(test4);
 
 function tempotrabalho (hs,ms,ss,hq,mq,sq){
 
@@ -75,11 +75,11 @@ function tempotrabalho (hs,ms,ss,hq,mq,sq){
 
 
 
-    //console.log("H: " + h + " M: " + m + " S: " + segundos_trabalho);
+    console.log("H: " + h + " M: " + m + " S: " + segundos_trabalho);
 }
 
-//var test5 = tempotrabalho(8,0,0,9,2,5);
-//console.log(test5);
+var test5 = tempotrabalho(8,0,0,9,2,5);
+console.log(test5);
 
 function retangulo (largura,altura){
     var c= "";
@@ -93,8 +93,8 @@ function retangulo (largura,altura){
 
 }
 
-//var test6 = retangulo(20,22);
-//console.log(test6);
+var test6 = retangulo(20,22);
+console.log(test6);
 
 function triangulo (altura) {
     var t = "";
@@ -107,7 +107,7 @@ function triangulo (altura) {
         
 }
 
-//triangulo(20);
+triangulo(20);
 
 function caixa (lado){
     var box = "";
@@ -125,7 +125,7 @@ function caixa (lado){
         console.log(box);
     }
 
-//caixa(10)
+caixa(10)
 
 function notas (array1){
     var melhor_nota = array1[0][1];
@@ -160,14 +160,14 @@ function notas (array1){
         else if (media<array1[j][1]){
             array2 += [array1[j][1]-media];
         }
-        //console.log(array2);
+        console.log(array2);
     }
-    //console.log("Melhor nota: " + melhor_nota + "\n" + "Pior nota: " + pior_nota + "\n" + "Positivas: " + positivas + "\n" + "Negativas: " + negativas )
-   // console.log("S: " + soma + "M: " + media)
+    console.log("Melhor nota: " + melhor_nota + "\n" + "Pior nota: " + pior_nota + "\n" + "Positivas: " + positivas + "\n" + "Negativas: " + negativas )
+   console.log("S: " + soma + "M: " + media)
 
 }
 
-//notas([["João",20],["Tiago",15],["Pedro",10],["Ana",8],["Maria",7]])
+notas([["João",20],["Tiago",15],["Pedro",10],["Ana",8],["Maria",7]])
 
 
 var student1 = {name: "Pedro Alves", grade: 20, number: 678};
