@@ -77,8 +77,12 @@ module.exports = {
     },
     concatenate: function(array,array1){
         var array_saida = [];
-            array_saida.push(array);
-            array_saida.push(array1);
+            for(var i = 0; i<array.length; i++){
+                array_saida.push(array[i]);
+            }
+            for(var j = 0; j<array1.length; j++){
+                array_saida.push(array1[j]);
+            }
         return array_saida;
     }
 
