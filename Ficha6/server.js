@@ -96,6 +96,18 @@ app.get('/log.txt', (req, res) => {
     });
 })
 
+app.delete('/clear', (req, res) => {
+    fs.unlink("log.txt", (err)=>{
+        if(err != undefined){
+            res.status(304).end("Unable to delete file");
+        }
+        else {
+            res.send("File deleted!");
+        }
+    })
+})
+
+
 app.listen(port, () => {
     console.log(`Server is running on port ${port}...`);
 });

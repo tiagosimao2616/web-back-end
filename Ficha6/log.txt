@@ -1,2 +1,2 @@
 SERVER STARTED 
-/log.txt, GET, Tue Apr 18 2023 20:46:59 GMT+0100 (Hora de verão da Europa Ocidental)
+/clear, GET, Tue Apr 18 2023 20:55:36 GMT+0100 (Hora de verão da Europa Ocidental)
