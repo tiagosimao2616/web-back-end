@@ -6,7 +6,22 @@ const port = 3000;
 
 fs.writeFileSync("log.txt", "");
 
+app.use(writeLog);
 app.use(express.json());
+
+function writeLog(req, res, next){
+    var log = req.url + ", " + req.method + ", " + new Date().toString() + "\n";
+    fs.appendFileSync("log.txt", log);
+    next();
+};
+
+fs.appendFileSync("log.txt", "SERVER STARTED \n");
+
+app.post('/test', (req, res) => {
+      
+    res.end("TEST POST");
+})
+
 
 app.get('/', (req, res) => {
     const body = 'Hello world!';
@@ -35,6 +50,52 @@ app.get('/fhtml', (req, res) => {
     res.end(body);
 })
 
+app.get('/html/:name', (req, res) => {
+    var name = req.params.name;
+    var date = new Date();
+
+    /* var str = "Porto é o melhor!";
+    str = str.replace("Porto","Benfica"); */
+
+    var body = fs.readFileSync('index.html', "utf-8");
+    body = body.replace("{name}", name)
+    body = body.replace("{date}", date.toString())
+    
+    
+    res.writeHead(200, {
+        'Content-Length': Buffer.byteLength(body),
+        'Content-Type': 'html'
+});
+    res.end(body);
+})
+
+app.get('/s', (req, res) => {
+    var date = new Date();
+
+    var body = fs.readFileSync('index.html', "utf-8");
+    body = body.replace("{date}", date.toString())
+    
+    
+    res.writeHead(200, {
+        'Content-Length': Buffer.byteLength(body),
+        'Content-Type': 'html'
+});
+    res.end(body);
+})
+
+app.get('/log', (req, res) => {
+    var log = fs.readFileSync("log.txt", "utf-8");
+    res.send(log);
+})
+
+app.get('/log.txt', (req, res) => {
+    res.download("log.txt", (err)=>{
+        if(err){
+            res.status(404).end(err.message);
+        }
+    });
+})
+
 app.listen(port, () => {
-    console.log(`Example app listening on port ${port}`);
+    console.log(`Server is running on port ${port}...`);
 });
