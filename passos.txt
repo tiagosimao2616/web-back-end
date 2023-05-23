@@ -1,0 +1,11 @@
+MK DIR 'ficha10'
+
+npm i express --view=ejs
+
+npm i
+
+npm i mysql2
+
+npm i sequelize
+
+npx express-generator
