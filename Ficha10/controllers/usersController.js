@@ -2,31 +2,31 @@ const Loan = require('../sequelize').Loan;
 const Book = require('../sequelize').Book;
 const User = require('../sequelize').User;
 
-exports.getAllLoans = (req, res, next) => {
-    Loan.findAll({include:[User, Book]}).then(loans =>{
-        res.send(loans);
+exports.getAllUsers = (req, res, next) => {
+    User.findAll().then(users =>{
+        res.send(users);
     });
 } 
 
-exports.getLoanById = (req, res, next) => {
-    Loan.findByPk(req.params.id).then(results => { 
+exports.getUserById = (req, res, next) => {
+    User.findByPk(req.params.id).then(results => { 
         res.send(results)
     });
-}
+} 
 
-exports.updateLoanById = (req, res, next) => {
-    Loan.update(req.body,{
+exports.updateUserById = (req, res, next) => {
+    User.update(req.body,{
         where: {
             id: req.params.id,
         }
-    }).then(loans => {
-        res.send(loans);
+    }).then(users => {
+        res.send(users);
     })
 }
 
-exports.deleteLoanById = (req, res, next) => {
+exports.deleteUserById = (req, res, next) => {
     var id = req.params.id;
-    Loan.destroy({
+    User.destroy({
         where: {
             id: id
         }
@@ -40,8 +40,8 @@ exports.deleteLoanById = (req, res, next) => {
 
 }
 
-exports.createLoanById = (req, res, next) => {
-    Loan.create(req.body)
+exports.createUserById = (req, res, next) => {
+    User.create(req.body)
         .then(body => {
             res.send("Inserted " + body.id);
         });
