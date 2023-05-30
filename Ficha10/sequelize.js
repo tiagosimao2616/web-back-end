@@ -4,7 +4,7 @@ const UserDataModel = require('./models/Users');
 const BookDataModel = require('./models/Books');
 const LoanDataModel = require('./models/Loans');
 
-const sequelize = new Sequelize('ficha_10', 'root', 'password', {
+const sequelize = new Sequelize('ficha_10', 'root', '', {
     host: 'localhost',
     dialect: 'mysql'
 });
@@ -38,7 +38,7 @@ Book.create(
 Loan.create({
     UserId: 1,
     BookId: 1
-}); */
+});   */
 
 sequelize.authenticate()
     .then(() => {
