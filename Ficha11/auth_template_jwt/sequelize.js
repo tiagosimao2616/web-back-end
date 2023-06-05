@@ -27,3 +27,6 @@ sequelize.sync({ force: false })
         console.log('Tables created!');
     });
 
+module.exports = {
+    User
+}
