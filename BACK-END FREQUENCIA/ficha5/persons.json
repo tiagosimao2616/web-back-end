@@ -1,0 +1,34 @@
+{
+    "person1":{
+        "id":1,
+        "FirstName":"Zé",
+        "LastName":"Pereira",
+        "Gender":"Male",
+        "Age":18,
+        "profession":"student"
+    },
+    "person2":{
+        "id":2,
+        "FirstName":"Ivo",
+        "LastName":"Silva",
+        "Gender":"Male?",
+        "Age":19,
+        "profession":"Bronze"
+    },
+    "person3":{
+        "id":3,
+        "FirstName":"João",
+        "LastName":"Rodrigues",
+        "Gender":"Male",
+        "Age":26,
+        "profession":"student"
+    },
+    "person4":{
+        "id":4,
+        "FirstName":"Catia",
+        "LastName":"Pereira",
+        "Gender":"Female",
+        "Age":37,
+        "profession":"Cheff"
+    }
+}

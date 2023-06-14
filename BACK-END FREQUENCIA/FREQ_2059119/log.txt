@@ -1,0 +1,8 @@
+Path: /employees, Dia: function getDay() { [native code] }, Mês: function getMonth() { [native code] }, Ano: function getFullYear() { [native code] }
+Path: /employees, Dia: function getDay() { [native code] }, Mês: function getMonth() { [native code] }, Ano: function getFullYear() { [native code] }
+Path: /employees, Dia: function getDay() { [native code] }, Mês: function getMonth() { [native code] }, Ano: function getFullYear() { [native code] }
+Path: /employees/id/:id, Dia: function getDay() { [native code] }, Mês: function getMonth() { [native code] }, Ano: function getFullYear() { [native code] }
+Path: /employees, Dia: function getDay() { [native code] }, Mês: function getMonth() { [native code] }, Ano: function getFullYear() { [native code] }
+Path: /employees, Dia: function getDay() { [native code] }, Mês: function getMonth() { [native code] }, Ano: function getFullYear() { [native code] }
+Path: /employees, Dia: function getDay() { [native code] }, Mês: function getMonth() { [native code] }, Ano: function getFullYear() { [native code] }
+Path: /employees, Dia: function getDay() { [native code] }, Mês: function getMonth() { [native code] }, Ano: function getFullYear() { [native code] }

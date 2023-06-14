@@ -1,0 +1,4 @@
+express --view=pug/ejs
+npm i(instala todas as dependencias)
+npm i mysql2 (instalar dependencia extra mysql)
+npm start(iniciar o projeto para localhost)

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+
+function verfNota(nota_pratica,nota_teorica){
+    //nota pratica 60%
+    //nota teorica 40%
+    media = (nota_pratica * 0.6 + nota_teorica *0.4)
+    if(media >= 9.5)
+        console.log("aluno aprovado");
+    else
+        console.log("aluno reprovado");
+}
+verfNota(20,0);
+
+function mesString(mesnumero){
+    meses = ["janeiro","fevereiro","março","abril","maio","junho","julho","agosto","setembro","outubro","novembro","dezembro"]
+    return meses[mesnumero-1]
+}
+console.log("mês -> "+mesString(2))
+
+function conta(num1,num2,operador){
+    switch (operador) {
+        case "*":
+            total = num1 * num2;
+            console.log(num1+" * "+num2)
+            break;
+        case "+":
+            total = num1 + num2;
+            console.log(num1+" + "+num2)
+            break;
+        case "-":
+            total = num1 - num2;
+            console.log(num1+" - "+num2)
+            break;
+        case "/":
+            total = num1 / num2;
+            console.log(num1+" / "+num2)
+            break;
+        case "^":
+            console.log(num1+" ^ "+num2)
+            total = num1 ^ num2;
+            break;
+        default:
+            return "erro operador não identificado"
+            break;
+    }
+
+    return total;
+}
+console.log("resultado -> "+conta(1,2,"+"));
+
+function multiplos5(){
+    x = 0;
+    while (true){
+        if((5*x) >= 20){
+            break
+        }
+        console.log(5+"*"+x+"="+(5*x));
+        x++;
+    }
+    
+}
+multiplos5()
+
+function somainteiros(){
+    soma = 0
+    while (x < 100){
+        soma += x
+        x++;
+    }
+    console.log("soma total = "+soma)
+}
+somainteiros();
+
+function factorial(num){
+    facto = 1
+    while (num != 0){
+        facto = facto * num
+        num--
+    }
+    return facto
+}
+console.log("factorial "+factorial(10));
+
+function maxminmed(lista){
+    min = lista[0]
+    max = lista[0]
+    media = 0
+    soma = 0
+    for(x in lista){
+        if(x<min)
+            min = x
+        if(x>max)
+            max = x
+        soma = soma + x;
+    }
+    media = soma/lista.length
+    /*
+    for(x=0; x < lista.length; x++){
+        if(lista[x]<min)
+            min = lista[x]
+        if(lista[x]>max)
+            max = lista[x]
+        soma = soma + lista[x];
+    }*/
+    console.log("min "+lista[min])
+    console.log("max "+lista[max])
+    console.log("media "+media)
+}
+maxminmed([1,2,3,4,5,6,7,8,9,10])
+
+</script>

@@ -1,0 +1,1 @@
+function algotithm(array) {}
