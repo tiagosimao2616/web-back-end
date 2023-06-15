@@ -4,7 +4,7 @@ const UserDataModel = require('./models/Users');
 const BookDataModel = require('./models/Books');
 const LoanDataModel = require('./models/Loans');
 
-const sequelize = new Sequelize('ficha_10', 'root', '', {
+const sequelize = new Sequelize('ficha_10', 'root', 'password', {
     host: 'localhost',
     dialect: 'mysql'
 });
